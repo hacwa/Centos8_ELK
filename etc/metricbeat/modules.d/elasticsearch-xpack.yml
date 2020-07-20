@@ -1,0 +1,17 @@
+# Module: elasticsearch
+# Docs: https://www.elastic.co/guide/en/beats/metricbeat/7.8/metricbeat-module-elasticsearch.html
+
+- module: elasticsearch
+  xpack.enabled: true
+  period: 10s
+  hosts: ["https://localhost:9200"]
+  ssl.certificate_authorities: ["/etc/metricbeat/certs/client-ca.cer"]
+  ssl.certificate: "/etc/metricbeat/certs/client.cer"
+  ssl.key: "/etc/metricbeat/certs/client.key"
+  username: elastic
+  password: md3ShcsxRnfz
+  ssl.verification_mode: "none"
+
+  #username: "user"
+  #password: "secret"
+

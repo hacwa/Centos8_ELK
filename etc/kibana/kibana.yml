@@ -1,0 +1,24 @@
+server.port: 5601
+#server.host: "192.168.119.5"
+server.host: "0.0.0.0"
+server.name: "elk-01"
+elasticsearch.hosts: ["https://localhost:9200"]
+elasticsearch.ssl.certificateAuthorities: /etc/kibana/certs/client-ca.cer
+elasticsearch.username: "kibana"
+elasticsearch.password: "md3ShcsxRnfz"
+server.ssl.enabled: true
+server.ssl.key: /etc/kibana/certs/client.key
+server.ssl.certificate: /etc/kibana/certs/client.cer
+logging.dest: /var/log/kibana/kibana.log
+
+
+#elasticsearch.url: "https://localhost:9200" 
+#xpack.security.enabled: true
+#elasticsearch.username: "kibana"
+#elasticsearch.password: "md3ShcsxRnfz"
+#elasticsearch.ssl.certificateAuthorities: config/certs/client-ca.cer
+elasticsearch.ssl.verificationMode: certificate
+monitoring.kibana.collection.enabled: false
+
+#server.host: "192.168.119.5"
+
